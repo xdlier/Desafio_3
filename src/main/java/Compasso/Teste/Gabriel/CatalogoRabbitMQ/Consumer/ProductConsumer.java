@@ -15,7 +15,7 @@ public class ProductConsumer {
 	
 	@RabbitListener(queues = MessagingConfig.QUEUE)
 	public void consumeMessagesFromQueue(Product product) {
-		product.setName(product.getName()+"(1)");
+		product.setName(product.getName()+" - RabbitMQ");
 		repository.save(product);
 	}
 

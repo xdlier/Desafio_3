@@ -1,5 +1,8 @@
 package Compasso.Teste.Gabriel.CatalogoRabbitMQ.Model;
 
+import lombok.Getter;
+
+@Getter
 public class Erro {
 
 	private Integer status_code;
@@ -12,14 +15,6 @@ public class Erro {
 		} else if (status.equals(404)) {
 			this.message = "Item não encontrado, tente novamente!";
 		}
-	}
-
-	public Integer getStatus_code() {
-		return status_code;
-	}
-
-	public String getMessage() {
-		return message;
 	}
 
 }
