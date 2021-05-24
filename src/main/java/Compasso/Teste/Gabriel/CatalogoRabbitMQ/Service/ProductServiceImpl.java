@@ -38,6 +38,8 @@ public class ProductServiceImpl implements ProductService {
 			newProduct.setDescription(product.getDescription());
 		if (product.getPrice() != null)
 			newProduct.setPrice(product.getPrice());
+		publisher.sendPerm(newProduct);
+		publisher.sendTemp(newProduct);
 		return this.repository.save(newProduct);
 	}
 
